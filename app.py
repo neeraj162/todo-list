@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
+from flask.scaffold import _matching_loader_thinks_module_is_package
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -139,5 +140,6 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.secret_key = 'todo-list'
+    app.secret_key = 'haor nafdvgna frehfdgvihaerhg'
+    app.config['SESSION_TYPE'] = 'filesystem'
     app.run(debug=True, port=8000)
